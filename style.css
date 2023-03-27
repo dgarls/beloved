@@ -1,0 +1,22 @@
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Lora', serif;
+*/
+body{
+    text-align: center;
+    background-color: black;
+    font-family: 'Lora', serif;
+    overflow: hidden;
+}
+
+.panel{
+    font-size: 50px;
+    width: 100vw;
+    height: 100vh;
+}
+
+#title{
+    color: rgb(108, 20, 20);
+}
