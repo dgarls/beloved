@@ -18,5 +18,9 @@ body{
 }
 
 #title{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    
     color: rgb(108, 20, 20);
 }
