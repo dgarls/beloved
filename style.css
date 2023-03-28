@@ -8,7 +8,38 @@ body{
     text-align: center;
     background-color: black;
     font-family: 'Lora', serif;
-    overflow: hidden;
+}
+
+.upArrowBox{
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 20vw;
+    height: 15vh;
+    left: 50vw;
+    top: 7vh;
+    border: 1px solid red;
+}
+
+.downArrowBox{
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 20vw;
+    height: 15vh;
+    left: 50vw;
+    bottom: -7vh;
+    border: 1px solid red;
+}
+
+#upArrow{
+    position: fixed;
+    color: white;
+    top: -1vh;
+}
+
+#downArrow{
+    position: fixed;
+    color: white;
+    bottom: -3vh;
 }
 
 .panel{
@@ -18,9 +49,22 @@ body{
 }
 
 #title{
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: grid;
-    gap: 20px;
+    gap: 15px;
     grid-template-columns: repeat(3, 1fr);
-    
+    justify-content: center;
     color: rgb(108, 20, 20);
 }
+
+#title > div{
+    border: 1px solid red;
+}
+
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
