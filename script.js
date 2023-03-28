@@ -4,12 +4,12 @@ len = panels.length - 1;
 
 const bringArrowDown = element => {
     if (currentPanel === 0 && element.id === 'upArrow') return;
-    element.style.transform = "scale(2) translateY(4vh)";
+    element.style.transform = "scale(2) translateY(5vh)";
 }
 
 const bringArrowUp = element => {
     if (currentPanel === len && element.id === 'downArrow') return;
-    element.style.transform = "scale(2) translateY(-4vh)";
+    element.style.transform = "scale(2) translateY(-5vh)";
 }
 
 const moveDown = () => {

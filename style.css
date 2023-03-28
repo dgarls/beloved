@@ -50,11 +50,11 @@ body{
 }
 
 #upArrow{
-    top: -4vh;
+    top: -5vh;
 }
 
 #downArrow{
-    bottom: -4vh;
+    bottom: -5vh;
 }
 
 .material-symbols-outlined{
@@ -81,14 +81,6 @@ body{
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     color: rgb(108, 20, 20);
-}
-
-#title > .bg-image{
-    position: absolute;
-    background-image: url(images/title-background.jpg);
-    background-position: center;
-    height: 100%;
-    width: 100%;
 }
 
 #title > div{
@@ -125,7 +117,7 @@ body{
     padding: 10px;
     flex-wrap: wrap;
     font-size: 80px;
-    color: rgb(119, 2, 2);
+    color: rgb(150, 2, 2);
 }
 
 .title-card > p{
@@ -154,4 +146,5 @@ body{
 
 .intro-text{
     padding: 15vw;
+    font-size: 2.5vh;
 }
