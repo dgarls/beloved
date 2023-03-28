@@ -4,67 +4,154 @@ font-family: 'Oswald', sans-serif;
 font-family: 'Raleway', sans-serif;
 font-family: 'Lora', serif;
 */
+html{
+    overflow: hidden;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
 body{
     text-align: center;
     background-color: black;
-    font-family: 'Lora', serif;
+    height: 100%;
+    margin: 0;
+    color: white;
+}
+
+.cursor{
+    height: 200px;
+    width: 200px;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
 }
 
 .upArrowBox{
+    display: flex;
+    justify-content: center;
     transform: translate(-50%, -50%);
     position: fixed;
     width: 20vw;
     height: 15vh;
     left: 50vw;
     top: 7vh;
-    border: 1px solid red;
 }
 
 .downArrowBox{
+    display: flex;
+    justify-content: center;
     transform: translate(-50%, -50%);
     position: fixed;
     width: 20vw;
     height: 15vh;
     left: 50vw;
     bottom: -7vh;
-    border: 1px solid red;
 }
 
 #upArrow{
-    position: fixed;
-    color: white;
-    top: -1vh;
+    top: -4vh;
 }
 
 #downArrow{
+    bottom: -4vh;
+}
+
+.material-symbols-outlined{
     position: fixed;
+    user-select: none;
+    transform: scale(2);
     color: white;
-    bottom: -3vh;
+    transition: 0.2s ease-in-out;
+    background-color: red;
+    border-radius: 50%;
 }
 
 .panel{
-    font-size: 50px;
+    margin: 0;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    border-bottom: 6px dashed rgb(185, 138, 138);
 }
 
 #title{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    font-family: 'Lora', serif;
     display: grid;
-    gap: 15px;
+    gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     color: rgb(108, 20, 20);
 }
 
-#title > div{
-    border: 1px solid red;
+#title > .bg-image{
+    position: absolute;
+    background-image: url(images/title-background.jpg);
+    background-position: center;
+    height: 100%;
+    width: 100%;
 }
 
-.text{
+#title > div{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+#title > .quote{
+    padding: 20px;
+    color: black;
+    transition: 0.2s ease-in-out
+}
+
+#title > .quote:hover{
+    color: rgb(114, 85, 85);
+}
+
+.name{
+    position: absolute;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    right: 0px;
+    color: white;
+}
+
+.quote{
+    font-size: 1.2vw;
+}
+
+.title-card{
+    align-content: space-evenly;
+    padding: 10px;
+    flex-wrap: wrap;
+    font-size: 80px;
+    color: rgb(119, 2, 2);
+}
+
+.title-card > p{
+    padding: 10px;
+    color: rgb(225, 110, 110);
+    border: 2px dashed rgb(225, 110, 110);
+    font-size: 25px;
+}
+
+#intro{
+    margin-right: 50px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    font-size: 2vh;
+}
+
+.intro-card{
+    font-size: 4vh;
+    padding: 20px;
+    padding-left: 5vw;
+    border-right: 2px solid white;
+}
+
+.intro-text{
+    padding: 15vw;
+}

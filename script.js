@@ -1,25 +1,36 @@
-panels = document.getElementsByClassName('panel')
-
-currentPanel = panels[0]
+panels = document.getElementsByClassName('panel');
+currentPanel = 0;
+len = panels.length - 1;
 
 const bringArrowDown = element => {
-    if (currentPanel === 0 && element.id === 'uparrow') return;
-    element.style.transform = "translateY(4vh)";
+    if (currentPanel === 0 && element.id === 'upArrow') return;
+    element.style.transform = "scale(2) translateY(4vh)";
 }
 
 const bringArrowUp = element => {
-    if (currentPanel === panels.slice(-1) && element.id === 'downarrow') return;
-    element.style.transform = "translateY(-4vh)";
+    if (currentPanel === len && element.id === 'downArrow') return;
+    element.style.transform = "scale(2) translateY(-4vh)";
 }
 
 const moveDown = () => {
-    if ( currentPanel != panels.slice(-1) ){
-        window.scrollTo()
+    currentPanel += 1;
+    if (currentPanel >= len) {
+        currentPanel = len;
+        bringArrowDown(document.getElementById('downArrow'));
     }
+    window.scrollTo(0, panels[currentPanel].offsetTop);
 }
 
 const moveUp = () => {
-    if (currentPanel != panels[0]){
-
+    currentPanel -= 1;
+    if (currentPanel <= 0) {
+        currentPanel = 0;
+        bringArrowUp(document.getElementById('upArrow'));
     }
+    window.scrollTo(0, panels[currentPanel].offsetTop);
+}
+
+
+window.onload = function(){ 
+    window.scrollTo(0, 0);
 }
