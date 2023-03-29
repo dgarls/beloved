@@ -7,11 +7,9 @@ menuOpen = false;
 
 const toggleMenu = () => {
     if (menuOpen) {
-        // menuIcon.style.left = "4vw";
         menu.style.left = "-15%";
         menuOpen = false;
     }else{
-        // menuIcon.style.left = "24vw";
         menuOpen = true;
         menu.style.left = "0";
     }
@@ -56,5 +54,5 @@ const goHome = () => {
 
 
 window.onload = function(){ 
-    window.scrollTo(0, 0);
+    //window.scrollTo(0, 0);
 }

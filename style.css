@@ -87,6 +87,7 @@ body{
 
 #navBar > li{
     transition: 0.1s ease-in-out;
+    user-select: none;
 }
 
 #navBar > li:hover{
@@ -145,7 +146,7 @@ body{
 
 .name{
     position: absolute;
-    margin-right: 10px;
+    margin-right: 2vw;
     margin-top: 10px;
     font-size: 20px;
     right: 0px;
@@ -171,7 +172,7 @@ body{
     font-size: 25px;
 }
 
-#intro{
+#intro, #info, #analysis, #creative, #close{
     margin-right: 50px;
     padding: 0px;
     display: flex;
@@ -181,7 +182,7 @@ body{
     font-size: 2vh;
 }
 
-.intro-card{
+.intro-card, .info-card, .analysis-card{
     font-size: 4vh;
     padding: 20px;
     padding-left: 5vw;
@@ -191,4 +192,15 @@ body{
 .intro-text{
     padding: 15vw;
     font-size: 2.5vh;
+}
+
+.analysis-text > p{
+    background-color: rgb(43, 43, 43);
+    border-radius: 10%;
+    padding: 50px;
+    font-family: 'Lora', serif;
+    max-width: 80vw;
+    max-height: 80vh;
+    overflow: auto;
+    text-align: left;
 }
