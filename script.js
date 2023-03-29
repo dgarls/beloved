@@ -3,7 +3,23 @@ menu = document.getElementById("menu");
 menuIcon = document.getElementById("menuIcon");
 currentPanel = 0;
 len = panels.length - 1;
-menuOpen = true;
+menuOpen = false;
+
+const toggleMenu = () => {
+    if (menuOpen) {
+        // menuIcon.style.left = "4vw";
+        menu.style.left = "-15%";
+        menuOpen = false;
+    }else{
+        // menuIcon.style.left = "24vw";
+        menuOpen = true;
+        menu.style.left = "0";
+    }
+}
+
+const nav = (n) => {
+    window.scrollTo(0, panels[n].offsetTop);
+}
 
 const bringArrowDown = element => {
     if (currentPanel === 0 && element.id === 'upArrow') return;
@@ -38,17 +54,6 @@ const goHome = () => {
     currentPanel = 0;
 }
 
-const toggleMenu = () => {
-    if (menuOpen) {
-        // menuIcon.style.left = "4vw";
-        menu.style.left = "-15%";
-        menuOpen = false;
-    }else{
-        // menuIcon.style.left = "24vw";
-        menuOpen = true;
-        menu.style.left = "0";
-    }
-}
 
 window.onload = function(){ 
     window.scrollTo(0, 0);
