@@ -13,10 +13,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Montserrat:wght@300;400&family=Oswald&family=Raleway:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">    <!-- Fonts: Montserrat, Oswald, Raleway -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <link rel="icon" type="image/png" href="images/heart.png">
     <title>Beloved Multigenre Project</title>
 </head>
 <body>
+    <div class="menuBar" id="menu">
+        <ul id="navBar">
+            <li panel="">Home</li>
+            <li>Introduction</li>
+            <li>Informational</li>
+            <li>Analysis</li>
+            <li>Creative</li>
+            <li>Closing</li>
+            <li>Works Cited</li>
+        </ul>
+    </div>
+    
+    <span class="material-symbols-outlined" id="menuIcon" onclick="toggleMenu()">
+        menu
+    </span>
+
+    <span class="material-symbols-outlined" id="home" onclick="goHome()">
+        home
+    </span>
 
     <div class="upArrowBox" onmouseover="bringArrowDown(document.getElementById('upArrow'))" onmouseout="bringArrowUp(document.getElementById('upArrow'))">
         <span class="material-symbols-outlined" id="upArrow" onclick="moveUp()">

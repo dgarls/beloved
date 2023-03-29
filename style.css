@@ -18,15 +18,6 @@ body{
     color: white;
 }
 
-.cursor{
-    height: 200px;
-    width: 200px;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    z-index: -1;
-}
-
 .upArrowBox{
     display: flex;
     justify-content: center;
@@ -57,14 +48,63 @@ body{
     bottom: -5vh;
 }
 
+#home{
+    bottom: 4vh;
+    right: 4vw;
+    padding: 3px;
+}
+
+#menuIcon{
+    padding: 3px;
+    left: 4vw;
+    top: 4vh;
+    transition: 0.5s ease-in-out;
+}
+
+.menuBar{
+    font-family: 'Raleway', sans-serif;
+    position: fixed;
+    height: 100vh;
+    width: 15%;
+    left: 0;
+    background-color: rgb(46, 1, 1);
+    transition: 0.5s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 1.7vw;
+}
+
+.menuBar > ul {
+    padding-inline-start: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+#navBar > li{
+    transition: 0.1s ease-in-out;
+}
+
+#navBar > li:hover{
+    color: rgb(117, 117, 117);
+}
+
 .material-symbols-outlined{
     position: fixed;
     user-select: none;
     transform: scale(2);
     color: white;
     transition: 0.2s ease-in-out;
-    background-color: red;
+    background-color: rgb(122, 0, 0);
     border-radius: 50%;
+}
+
+.material-symbols-outlined:hover{
+    background-color: red;
 }
 
 .panel{
