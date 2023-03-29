@@ -78,6 +78,7 @@ body{
     font-family: 'Lora', serif;
     display: grid;
     gap: 10px;
+    padding: 10px;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     color: rgb(108, 20, 20);
@@ -90,13 +91,16 @@ body{
 }
 
 #title > .quote{
+    background-color: rgba(17, 17, 17, 0.148);
+    border-radius: 20%;
     padding: 20px;
-    color: black;
+    color: rgba(128, 128, 128, 0.148);
     transition: 0.2s ease-in-out
 }
 
 #title > .quote:hover{
-    color: rgb(114, 85, 85);
+    background-color: rgb(47, 47, 47);
+    color: white;
 }
 
 .name{
