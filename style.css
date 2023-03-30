@@ -198,8 +198,9 @@ body{
 .analysis-text > p{
     background-color: rgb(43, 43, 43);
     border-radius: 10%;
-    padding: 50px;
+    padding: 5vw;
     font-family: 'Lora', serif;
+    font-size: 1.3vw;
     max-width: 80vw;
     max-height: 80vh;
     overflow: auto;
