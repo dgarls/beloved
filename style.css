@@ -116,6 +116,7 @@ body{
 }
 
 #title{
+    background-image: radial-gradient(rgb(57, 0, 0), black);
     font-family: 'Lora', serif;
     display: grid;
     gap: 10px;
@@ -132,7 +133,7 @@ body{
 }
 
 #title > .quote{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 20%;
     padding: 20px;
     color: rgba(128, 128, 128, 0.148);
@@ -140,8 +141,8 @@ body{
 }
 
 #title > .quote:hover{
-    background-color: rgb(47, 47, 47);
-    color: white;
+    background-color: rgb(85, 0, 0);
+    color: rgb(255, 142, 142);
 }
 
 .name{
