@@ -18,6 +18,24 @@ body{
     color: white;
 }
 
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(60, 0, 0);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(150, 2, 2);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(160, 0, 0);
+}
+
 .upArrowBox{
     display: flex;
     justify-content: center;
@@ -183,7 +201,7 @@ body{
     font-size: 2vh;
 }
 
-.intro-card, .info-card, .analysis-card{
+.intro-card, .info-card, .analysis-card, .creative-card{
     font-size: 4vh;
     padding: 20px;
     padding-left: 5vw;
@@ -196,7 +214,7 @@ body{
 }
 
 .analysis-text > p{
-    background-color: rgb(43, 43, 43);
+    background-color: rgba(61, 61, 61, 0.5);
     border-radius: 10%;
     padding: 5vw;
     font-family: 'Lora', serif;
@@ -214,4 +232,17 @@ body{
 
 .analysis-card > div:hover{
     color: grey;
+}
+
+.creative-card{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.creative-text > pre{
+    font-family: 'Montserrat', sans-serif;
+    max-height: 90vh;
+    width: 60vw;
+    overflow: auto;
+    overflow-x: hidden;
+    text-align: left;
 }
