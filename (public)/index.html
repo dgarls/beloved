@@ -1,89 +1,193 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.19.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.19.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.19.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.19.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.19.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.19.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.19.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.19.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.19.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.19.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Montserrat:wght@300;400&family=Oswald&family=Raleway:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">    <!-- Fonts: Montserrat, Oswald, Raleway -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Beloved Multigenre Project</title>
+</head>
+<body>
+    <div class="menuBar" id="menu">
+        <ul id="navBar">
+            <li onclick="nav(0)">Home</li>
+            <li onclick="nav(1)">Introduction</li>
+            <li onclick="nav(2)">Informational</li>
+            <li onclick="nav(3)">Analysis</li>
+            <li onclick="nav(4)">Creative</li>
+            <li onclick="nav(5)">Closing</li>
+            <li onclick="nav(6)">Works Cited</li>
+        </ul>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    
+    <span class="material-symbols-outlined" id="menuIcon" onclick="toggleMenu()">
+        menu
+    </span>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <span class="material-symbols-outlined" id="home" onclick="goHome()">
+        home
+    </span>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <div class="upArrowBox" onmouseover="bringArrowDown(document.getElementById('upArrow'))" onmouseout="bringArrowUp(document.getElementById('upArrow'))">
+        <span class="material-symbols-outlined" id="upArrow" onclick="moveUp()">
+            keyboard_arrow_up
+        </span>
+    </div>
+
+    <div class="downArrowBox" onmouseover="bringArrowUp(document.getElementById('downArrow'))" onmouseout="bringArrowDown(document.getElementById('downArrow'))">
+        <span class="material-symbols-outlined" id="downArrow" onclick="moveDown()">keyboard_arrow_down</span>
+    </div>
+
+    <div class="panel" id="title">
+        <div class="name">Devon Garls</div>
+        <div></div>
+        <div class="quote">“If a house burns down, it's gone, but the place--the 
+                            picture of it--stays, and not just in my rememory, but out there, 
+                            in the world.” (47)</div>
+        <div></div>
+        <div class="quote">“Why was there nothing it reused? No misery, no regret, 
+                            no hateful picture too rotten to accept?” (89)
+            </div>
+        <div class="title-card">
+            <i>Beloved</i>
+            <p>An analysis of memory and trauma in Toni Morrison's novel</p>
+        </div>
+        <div class="quote">“Paul D dug it up, gave her back her body, kissed her divided back, 
+                            stirred her rememory and brought her more news: of clabber, of iron, 
+                            of roosters' smiling, but when he heard her news, he counted her feet
+                            and didn't even say goodbye.” (241)
+            </div>
+        <div></div>
+        <div class="quote">“So, in the end, they forgot her too. Remembering seemed unwise.” (350)</div>
+        <div></div>
+    </div>
+
+    <div class="panel" id="intro">
+        <div class="intro-card">Introduction</div>
+        <div class="intro-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, reiciendis. Recusandae a obcaecati quis ad consequuntur. Quasi sunt saepe labore similique, soluta, dolores quam deleniti corporis doloribus, magni quae ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eveniet provident impedit ad doloribus laudantium assumenda. Sed quas sapiente incidunt aperiam maiores rem magnam voluptate voluptas! Eveniet id odio impedit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio, debitis quis saepe ipsa dicta qui, ducimus reiciendis iure distinctio, cum eaque. Nulla quod dolor optio dolorum saepe incidunt omnis autem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat minus minima dignissimos commodi, velit nisi voluptatum sed ab perferendis porro ratione autem a nesciunt. Et incidunt non iure illo omnis! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, ipsa sapiente. Optio culpa ullam quaerat modi error? Doloremque labore ad, esse voluptatibus magnam ab maiores. Perferendis officia modi quidem commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem doloribus saepe vitae labore nihil facere dolore, officiis vel cumque doloremque omnis. A temporibus excepturi perspiciatis quaerat, ut corrupti suscipit Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat tenetur iste nesciunt molestias quia temporibus voluptate officiis minus consequatur unde iusto in vitae sapiente tempore maxime aliquam, libero magnam inventore.</div>
+    </div>
+
+    <div class="panel" id="info">
+       <div class="info-card">Information:<br>Fugitive Slave Act</div>
+       <div class="info-text">
+
+       </div>
+    </div>
+
+    <div class="panel" id="analysis">
+        <div class="analysis-card">
+            Analysis:<br><i>Beloved</i>'s Final Chapter<br><br>
+            <div id="passage" onclick="showPassage()"><i>Passage</i></div>
+            <div id="analysisText" onclick="showAnalysis()"><i>Analysis</i></div>
+        </div>
+
+        <div class="analysis-text">
+            <p id="analysisPortion">&nbsp;&nbsp;&nbsp;&nbsp;In Toni Morrison’s novel Beloved, the final chapter serves to conclude the ideas of love, trauma and acceptance. Beloved has been banished from 124 by the collective force of the community of women, saving Sethe from her parasitic grasp. Beloved, in this final chapter, symbolizes the ubiquitous mental affliction on African Americans caused by countless years of slavery and dehumanization. In the final pages, Morrison takes on a disembodied perspective and reveals the fate of Beloved along with the effect that she had on the community around 124, ultimately concluding that, in order to truly heal traumatic wounds and prevent intergenerational trauma, people must not dwell on the painful woes of the past but instead move forward through an emotional acknowledgement of one's history, while also recognizing the benefits of forgetting a traumatizing past.
+                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;At the beginning of the passage, the narrator establishes Beloved as a widely impactful and acknowledged figure, yet paradoxically forgettable despite her impact on the community. Morrison describes the contradictory circumstances of Beloved’s notoriety, stating, “Everybody knew what she was called, but nobody anywhere knew her name.” The community of 124 knew of Beloved and the damage she caused Sethe, but they didn’t truly know who she was and opted to forget her. Her lack of a name symbolizes not only the struggle that mothers experience during slavery, opting to not name their children due to the likelihood of them dying young, but it also signifies Morrison’s focus on hopefulness for a brighter future. Rather than dwelling on Beloved’s name and who she is, the community moves on. Beloved’s legacy is forgotten and her memory fades into nature, “[erupting] into her separate parts.” The idea that she splits into separate parts demonstrates Beloved’s multifaceted meaning, representing not only the lives lost in the horrific era of slavery, but also as a universal symbol for grief and pain as a result of historical trauma. Just as Beloved separates into distinct parts, some representing grief and pain while others represent love, those dealing with trauma must also separate their history into different pieces in order to more effectively deal with their abuse. More broadly, the community’s focus on forgetting Beloved supports the idea that forgetting a painful past can be an effective way of dealing with trauma, moving away from history into a brighter future filled with hope. Furthermore, the narrator states that the community believed that “remembering seemed unwise,” willingly forgetting Beloved because thinking about her is not productive to repairing the damage she left. This assertion demonstrates that ruminating on abuse suffered in the past is an unhelpful and damaging process which prevents one from moving forward. 
+                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Despite the community’s aim to forget Beloved, the narrator depicts Beloved as ubiquitous and hidden within every inch of the community’s lives, illustrating the difficulty in forgetting past pain or trauma. The narrator describes that, “Occasionally, however, the rustle of a skirt hushes when they wake,” insinuating that the spirit of Beloved follows the lives of all those who came into contact with her long after she had been banished. Even after forgetting Beloved, her impact on the community remains hidden in the hushed corners of their lives, appearing in small moments when the community seems to finally forget her. Her constant appearance in the lives of others reflects how traumatic and painful memories are never truly forgotten but rather stowed in the subconscious of those who experienced them. Memories of abuse may seem to fade, but they always seem to appear in associations made many years ago. Photos of family, the movement of fabric, a breeze during sleep can all bring back long-forgotten memories of that abuse. Beloved had been banished for a long time, but her impact still shakes the people she interacted with. Similarly, even after slavery had been outlawed for decades, the remnants of the physical and emotional oppression still haunted the lives of many African Americans. Trauma stays with people even long after the event occurred, requiring those to find a way to deal with the memories in a healthy manner.
+                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Throughout the passage, the narrator repeats the phrase “this is not a story to pass on” in order to establish a contradicting idea between telling Sethe and Beloved’s story while also saying to keep it hidden, ultimately illustrating that passing on a traumatic story can be a way to heal trauma when presented in a respectful and meaningful manner. The community of African Americans who experienced Beloved did not carry on her tale and tried to heal their grief and pain through forgetting, keeping her story inside. Morrison, through presenting Beloved’s story as a symbol of the lives lost during the tragic struggle of slavery, thus contradicts the narrator’s assertion that her story is not to be passed on. While the community strives to forget her, Morrison pushes the reader to remember Sethe and Beloved’s story as a way of honoring the African American lives that were lost as a result of enslavement. By writing a story about a historical figure which fought against the sins of slavery, Sethe and Beloved’s story is passed on, demonstrating that remembering painful times can be an effective way of dealing with suffering when done in a respectful manner, focused primarily on how to heal those wounds.
+                <br><br>&nbsp;&nbsp;&nbsp;&nbsp;Beloved’s last chapter assumes a disembodied perspective, focusing on the disappearance and lasting effects of Beloved on the community around 124. Beloved, acting as a symbol not only for pain and grief but also love and hopefulness, helps conclude the ideas of how to heal wounds left by trauma and the importance of dealing with past abuse in a meaningful and healthy way.
+            </p>
+        </div>
+    </div>
+
+    <div class="panel" id="creative">
+        <div class="creative-card">
+            Creative:<br>
+            she loves us
+        </div>
+
+        <div class="creative-text">
+            <pre>she has me 
+i see him as well
+she has me and him and him and her
+she is fast and i am warm and i am crying
+                
+wood dust darkness
+i am with her and them
+she is not crying  i am crying and they are crying
+breathing breathing breathing
+                
+i am on the floor
+she grabs him first
+she has him
+she has the shape in her hand
+it is long and shiny  i want it
+the shape is in him
+there is red in him
+she is moving the shape in him
+red is on him and in him and on her
+he is not crying  she is not crying
+red red red
+                
+she makes the red come out of him too
+there is red everywhere  the shape is red not shiny
+him and him are all red  they are sleeping
+i love her  she loves us
+                
+she has her now and she is not crying
+the shape is moving in her  now she is not crying
+she is all red  her neck is red
+she is sleeping  the shape is still moving in her
+still moving in her  still moving
+her head is off and there is red
+she still has her
+she is not crying
+red red red
+                
+i am flying  she has me  upside down
+i see her  she is all red  her head is off
+i am flying fast  it is flying  the wall
+why am i flying  bright  i am not flying
+                
+i am not sleeping  she is  he is  he is
+                
+ she loves us she loves us she loves us
+                </pre>
+        </div>
+    </div>
+
+    <div class="panel" id="close">
+        
+    </div>
+
+    <div class="panel" id="works-cited">
+        
+    </div>
+
+    <script src="script.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyD6AAcTRdRZzedEp_EFMfgVBlarFLprl48",
+          authDomain: "beloved-multigenre.firebaseapp.com",
+          projectId: "beloved-multigenre",
+          storageBucket: "beloved-multigenre.appspot.com",
+          messagingSenderId: "790422387167",
+          appId: "1:790422387167:web:e2bf9a2423213fde9cac6a",
+          measurementId: "G-4G3GR5MHSE"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+</body>
 </html>
