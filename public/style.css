@@ -159,8 +159,9 @@ body{
 }
 
 #title > .quote:hover{
-    background-color: rgb(85, 0, 0);
+    background-color: rgb(98, 0, 0);
     color: rgb(255, 142, 142);
+    border: 1px solid white;
 }
 
 .name{
@@ -191,7 +192,7 @@ body{
     font-size: 25px;
 }
 
-#intro, #info, #analysis, #creative, #close{
+#intro, #info, #analysis, #creative, #close, #works-cited{
     margin-right: 50px;
     padding: 0px;
     display: flex;
@@ -201,16 +202,66 @@ body{
     font-size: 2vh;
 }
 
-.intro-card, .info-card, .analysis-card, .creative-card{
+.intro-card, .info-card, .analysis-card, .creative-card, .close-card, .works-card{
     font-size: 4vh;
     padding: 20px;
     padding-left: 5vw;
     border-right: 2px solid white;
 }
 
+#intro{
+    background-image: linear-gradient(rgb(40, 0, 0), black);
+}
+
+#info{
+    background-image: linear-gradient(black, rgb(40, 0, 0));
+    font-family: 'Oswald', sans-serif;
+}
+
+#analysis{
+    background-image: linear-gradient(rgb(40, 0, 0), black);
+}
+
+#creative{
+    background-image: linear-gradient(black, rgb(40, 0, 0));
+}
+
+#close{
+    background-image: linear-gradient(rgb(40, 0, 0), black);
+}
+
+#works-cited{
+    background-image: linear-gradient(black, rgb(40, 0, 0));
+}
+
 .intro-text{
     padding: 15vw;
     font-size: 2.5vh;
+}
+
+.info-card{
+    width: 20vw;
+}
+
+.info-text{
+    height: 90vh;
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-around;
+    flex-basis: 30%;
+}
+
+.info-text > div{
+    border: 1px solid white;
+    padding: 5px;
+    background-color: rgb(24, 24, 24);
+}
+
+#thesis{
+    background-color: rgb(205, 0, 0);
 }
 
 .analysis-text > p{
