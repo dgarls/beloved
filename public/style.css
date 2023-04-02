@@ -302,10 +302,11 @@ body{
 .analysis-card > div{
     user-select: none;
     text-decoration: underline;
+    color: rgb(255, 154, 154);
 }
 
 .analysis-card > div:hover{
-    color: grey;
+    color: rgb(250, 55, 55);
 }
 
 .creative-card{
