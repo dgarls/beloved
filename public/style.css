@@ -84,8 +84,9 @@ body{
     position: fixed;
     height: 100vh;
     width: 15%;
-    left: -15%;
+    left: -16%;
     background-color: rgb(46, 1, 1);
+    border: 2px solid white;
     transition: 0.5s ease-in-out;
 
     display: flex;
@@ -238,8 +239,11 @@ body{
 }
 
 .intro-text{
-    padding: 15vw;
-    font-size: 2.5vh;
+    padding: 5vw;
+    font-size: 2vh;
+    column-count: 2;
+    column-gap: 20px;
+    column-rule-style: solid;
 }
 
 .info-card{

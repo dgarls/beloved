@@ -31,7 +31,7 @@ By and by all trace is gone, and what is forgotten is not only the footprints bu
 
 const toggleMenu = () => {
     if (menuOpen) {
-        menu.style.left = "-15%";
+        menu.style.left = "-16%";
         menuOpen = false;
     }else{
         menuOpen = true;
