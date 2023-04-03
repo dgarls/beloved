@@ -86,7 +86,7 @@ body{
     width: 15%;
     left: -16%;
     background-color: rgb(46, 1, 1);
-    border: 2px solid white;
+    border: 2px solid rgb(71, 24, 24);
     transition: 0.5s ease-in-out;
 
     display: flex;
@@ -125,6 +125,10 @@ body{
 
 .material-symbols-outlined:hover{
     background-color: red;
+}
+
+.material-symbols-outlined:active{
+    background-color: rgb(255, 85, 85);
 }
 
 .panel{
@@ -324,4 +328,14 @@ body{
     overflow: auto;
     overflow-x: hidden;
     text-align: left;
+}
+
+.works-card{
+    border: none;
+}
+.works-card > a{
+    color: white;
+}
+.works-card > a:hover{
+    color: rgb(255, 150, 150);
 }
