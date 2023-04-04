@@ -33,7 +33,7 @@ const toggleMenu = () => {
     if (menuOpen) {
         menu.style.left = "-16%";
         menuOpen = false;
-    }else{
+    } else {
         menuOpen = true;
         menu.style.left = "0";
     }
@@ -77,7 +77,7 @@ const goHome = () => {
     currentPanel = 0;
 }
 
-const showPassage = () =>{
+const showPassage = () => {
     document.getElementById("analysisPortion").innerHTML = passage;
 }
 
@@ -85,6 +85,6 @@ const showAnalysis = () => {
     document.getElementById("analysisPortion").innerHTML = analysisText;
 }
 
-window.onload = function(){ 
+window.onload = function () {
     //window.scrollTo(0, 0);
 }
