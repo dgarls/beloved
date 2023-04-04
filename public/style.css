@@ -4,13 +4,13 @@ font-family: 'Oswald', sans-serif;
 font-family: 'Raleway', sans-serif;
 font-family: 'Lora', serif;
 */
-html{
+html {
     overflow: hidden;
     scroll-behavior: smooth;
     height: 100%;
 }
 
-body{
+body {
     text-align: center;
     background-color: black;
     height: 100%;
@@ -18,25 +18,25 @@ body{
     color: white;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background: rgb(60, 0, 0);
     border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background: rgb(150, 2, 2);
     border-radius: 10px;
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
     background: rgb(160, 0, 0);
 }
 
-.upArrowBox{
+.upArrowBox {
     display: flex;
     justify-content: center;
     transform: translate(-50%, -50%);
@@ -47,7 +47,7 @@ body{
     top: 7vh;
 }
 
-.downArrowBox{
+.downArrowBox {
     display: flex;
     justify-content: center;
     transform: translate(-50%, -50%);
@@ -58,28 +58,28 @@ body{
     bottom: -7vh;
 }
 
-#upArrow{
+#upArrow {
     top: -5vh;
 }
 
-#downArrow{
+#downArrow {
     bottom: -5vh;
 }
 
-#home{
+#home {
     bottom: 4vh;
     right: 4vw;
     padding: 3px;
 }
 
-#menuIcon{
+#menuIcon {
     padding: 3px;
     left: 4vw;
     top: 4vh;
     transition: 0.5s ease-in-out;
 }
 
-.menuBar{
+.menuBar {
     font-family: 'Raleway', sans-serif;
     position: fixed;
     height: 100vh;
@@ -96,7 +96,7 @@ body{
     font-size: 1.7vw;
 }
 
-.menuBar > ul {
+.menuBar>ul {
     padding-inline-start: 0;
     list-style-type: none;
     display: flex;
@@ -104,16 +104,16 @@ body{
     gap: 2vh;
 }
 
-#navBar > li{
+#navBar>li {
     transition: 0.1s ease-in-out;
     user-select: none;
 }
 
-#navBar > li:hover{
+#navBar>li:hover {
     color: rgb(117, 117, 117);
 }
 
-.material-symbols-outlined{
+.material-symbols-outlined {
     position: fixed;
     user-select: none;
     transform: scale(2);
@@ -123,22 +123,22 @@ body{
     border-radius: 50%;
 }
 
-.material-symbols-outlined:hover{
+.material-symbols-outlined:hover {
     background-color: red;
 }
 
-.material-symbols-outlined:active{
+.material-symbols-outlined:active {
     background-color: rgb(255, 85, 85);
 }
 
-.panel{
+.panel {
     margin: 0;
     width: 100vw;
     min-height: 100vh;
     border-bottom: 6px dashed rgb(185, 138, 138);
 }
 
-#title{
+#title {
     background-image: radial-gradient(rgb(57, 0, 0), black);
     font-family: 'Lora', serif;
     display: grid;
@@ -149,13 +149,13 @@ body{
     color: rgb(108, 20, 20);
 }
 
-#title > div{
+#title>div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#title > .quote{
+#title>.quote {
     background-color: rgba(0, 0, 0, 0);
     border-radius: 20%;
     padding: 20px;
@@ -163,13 +163,13 @@ body{
     transition: 0.2s ease-in-out
 }
 
-#title > .quote:hover{
+#title>.quote:hover {
     background-color: rgb(98, 0, 0);
     color: rgb(255, 142, 142);
     border: 1px solid white;
 }
 
-.name{
+.name {
     position: absolute;
     margin-right: 2vw;
     margin-top: 10px;
@@ -178,11 +178,11 @@ body{
     color: white;
 }
 
-.quote{
+.quote {
     font-size: 1.2vw;
 }
 
-.title-card{
+.title-card {
     align-content: space-evenly;
     padding: 10px;
     flex-wrap: wrap;
@@ -190,14 +190,19 @@ body{
     color: rgb(150, 2, 2);
 }
 
-.title-card > p{
+.title-card>p {
     padding: 10px;
     color: rgb(225, 110, 110);
     border: 2px dashed rgb(225, 110, 110);
     font-size: 25px;
 }
 
-#intro, #info, #analysis, #creative, #close, #works-cited{
+#intro,
+#info,
+#analysis,
+#creative,
+#close,
+#works-cited {
     margin-right: 50px;
     padding: 0px;
     display: flex;
@@ -207,18 +212,23 @@ body{
     font-size: 2vh;
 }
 
-.intro-card, .info-card, .analysis-card, .creative-card, .close-card, .works-card{
+.intro-card,
+.info-card,
+.analysis-card,
+.creative-card,
+.close-card,
+.works-card {
     font-size: 4vh;
     padding: 20px;
     padding-left: 5vw;
     border-right: 2px solid white;
 }
 
-#intro{
+#intro {
     background-image: linear-gradient(rgb(40, 0, 0), black);
 }
 
-#info{
+#info {
     background-image: linear-gradient(black, rgb(40, 0, 0));
     font-family: 'Oswald', sans-serif;
     height: 80vh;
@@ -226,35 +236,37 @@ body{
     overflow-x: hidden;
 }
 
-#analysis{
+#analysis {
     background-image: linear-gradient(rgb(40, 0, 0), black);
 }
 
-#creative{
+#creative {
     background-image: linear-gradient(black, rgb(40, 0, 0));
 }
 
-#close{
+#close {
     background-image: linear-gradient(rgb(40, 0, 0), black);
 }
 
-#works-cited{
+#works-cited {
     background-image: linear-gradient(black, rgb(40, 0, 0));
 }
 
-.intro-text{
+.intro-text {
     padding: 5vw;
     font-size: 2vh;
     column-count: 2;
     column-gap: 20px;
     column-rule-style: solid;
+    column-rule-color:rgb(255, 192, 192);
+    text-align: left;
 }
 
-.info-card{
+.info-card {
     max-width: 30vw;
 }
 
-.info-text{
+.info-text {
     height: 80vh;
     min-width: 70vw;
     display: flex;
@@ -265,37 +277,38 @@ body{
     gap: 20px;
 }
 
-.info-text > div{
+.info-text>div {
     border: 1px solid white;
     padding: 5px;
     background-color: rgb(35, 35, 35);
     width: 30vw;
 }
-.info-text > img{
+
+.info-text>img {
     width: 30vw;
     height: auto;
     box-shadow: 0 4px 8px 0 rgba(227, 227, 227, 0.2), 0 6px 20px 0 rgba(213, 163, 163, 0.19);
 }
 
-#thesis{
+#thesis {
     font-size: 30px;
     background-color: rgb(205, 0, 0);
     width: 70vw;
 }
 
-#context{
+#context {
     background-color: rgb(52, 12, 12);
     font-size: 30px;
     width: 70vw;
 }
 
-#ohio{
+#ohio {
     background-color: rgb(52, 12, 12);
     font-size: 30px;
     width: 70vw;
 }
 
-.analysis-text > p{
+.analysis-text>p {
     background-color: rgba(42, 42, 42, 0.501);
     border-radius: 10%;
     padding: 5vw;
@@ -307,21 +320,21 @@ body{
     text-align: left;
 }
 
-.analysis-card > div{
+.analysis-card>div {
     user-select: none;
     text-decoration: underline;
     color: rgb(255, 154, 154);
 }
 
-.analysis-card > div:hover{
+.analysis-card>div:hover {
     color: rgb(250, 55, 55);
 }
 
-.creative-card{
+.creative-card {
     font-family: 'Montserrat', sans-serif;
 }
 
-.creative-text > pre{
+.creative-text>pre {
     font-family: 'Montserrat', sans-serif;
     max-height: 90vh;
     width: 60vw;
@@ -330,12 +343,14 @@ body{
     text-align: left;
 }
 
-.works-card{
+.works-card {
     border: none;
 }
-.works-card > a{
+
+.works-card>a {
     color: white;
 }
-.works-card > a:hover{
+
+.works-card>a:hover {
     color: rgb(255, 150, 150);
 }
