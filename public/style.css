@@ -258,6 +258,7 @@ body {
     column-count: 2;
     column-gap: 20px;
     column-rule-style: solid;
+    column-rule-color:rgb(255, 192, 192);
     text-align: left;
 }
 
